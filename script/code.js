@@ -6,7 +6,7 @@ document.getElementById('idForm').addEventListener('submit', function(event) {
     resultDiv.innerHTML = '';
 
     if (idNumber.length !== 13 || isNaN(idNumber)) {
-        resultDiv.innerHTML = '<p style="color: red;">Invalid ID number. It must be 13 digits long and numeric.</p>';
+        resultDiv.innerHTML = 'Invalid ID number. It must be 13 digits long and numeric.</p>';
         return;
     }
 
@@ -17,7 +17,7 @@ document.getElementById('idForm').addEventListener('submit', function(event) {
     const gender = genderCode >= 5000 ? 'Male' : 'Female';
 
     resultDiv.innerHTML = `
-        <p><strong>Day/Month/Year:</strong> ${day}/${month}/${year}</p>
-        <p><strong>Gender:</strong> ${gender}</p>
+        Day/Month/Year${day}/${month}/${year}
+        ${gender}
     `;
 });
